@@ -107,3 +107,17 @@ sudoku.c:7:8: note: while referencing ‘sudo’
 cc1: all warnings being treated as errors
 Compilation failed
 b88307a
+Wed 03 May 2023 11:58:13 PM UTC: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:84:19: error: array subscript 9 is above array bounds of ‘int[9][9]’ [-Werror=array-bounds]
+   84 |       if(n -> sudo[i][j] != 0 && marca[n -> sudo[i][j]] == 1){
+      |          ~~~~~~~~~^~~
+sudoku.c:7:8: note: while referencing ‘sudo’
+    7 |    int sudo[9][9];
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7686903
