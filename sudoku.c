@@ -44,32 +44,27 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  int i,j,marca[10];
-  
+  int i,j,k,marca[10],p;
+  //Filas
   for(i = 0 ; i < 9 ; i++){
-    
-    for(int k = 0; k < 10 ; k++){
+    for(k = 0; k < 10 ; k++){
       marca[k] = 0;
     }
-    
     for(j = 0 ; j < 9 ; j++){
-      
       if(n -> sudo[i][j] == 0){
         if(marca[n -> sudo[i][j]] == 1){
           return 0;
         }
       }
       marca[n -> sudo[i][j]] = 1;
-    }
-    
+    } 
   }
-
+  //Columnas
   for(j = 0 ; j < 9 ; j++){
-    for(int k = 0; k < 10 ; k++){
+    for(k = 0; k < 10 ; k++){
       marca[k] = 0;
     }
     for(i = 0 ; i < 9 ; i++){
-      
       if(n -> sudo[i][j] == 0){
         if(marca[n -> sudo[i][j]] == 1){
           return 0;
@@ -77,7 +72,20 @@ int is_valid(Node* n){
       }
       marca[n -> sudo[i][j]] = 1;
     }
-    
+  } 
+  //Submatrices
+  for(k = 0 ; k < 9 ; k++){
+    for(k = 0; k < 10 ; k++){
+      marca[k] = 0;
+    }
+    for(p = 0 ; p < 9 ; p++){
+      int a = 3*(k/3) + (p/3);
+      int b = 3*(k%3) + (p%3);
+      if(n -> sudo[i][j] != 0 && marca[n -> sudo[i][j]] == 1){
+        return 0;
+      }
+      marca[n -> sudo[i][j]] = 1;
+    }
   }
   return 1;
 }
