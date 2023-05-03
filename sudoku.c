@@ -45,11 +45,14 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
   int i,j,marca[10];
-  for(int k = 0; k < 10 ; k++){
-    marca[k] = 0;
-  }
+  
   
   for(i = 0 ; i < 9 ; i++){
+    
+    for(int k = 0; k < 10 ; k++){
+      marca[k] = 0;
+    }
+    
     for(j = 0 ; j < 9 ; j++){
       
       if(n -> sudo[i][j] == 0){
