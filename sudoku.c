@@ -56,9 +56,11 @@ List* get_adj_nodes(Node* n){
     for(j = 0 ; j < 9 ; j++){
       if(n -> sudo[i][j] == 0){
         Node* adj_n = (Node*) malloc(sizeof(Node));
-        adj_n = copy(n);
-        adj_n -> sudo[i][j] = i;
-        pushBack(list, adj_n);
+        for(int num = 1 ; num <= 9 ; num++){
+          adj_n = copy(n);
+          adj_n -> sudo[i][j] = num;
+          pushBack(list, adj_n);
+        }
       }
     }
   }
