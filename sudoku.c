@@ -84,7 +84,7 @@ int is_valid(Node* n){
       if(n -> sudo[i][j] != 0 && marca[n -> sudo[i][j]] == 1){
         return 0;
       }
-      marca[n -> sudo[i][j]] = 1;
+      marca[n -> sudo[a][b]] = 1;
     }
   }
   return 1;
