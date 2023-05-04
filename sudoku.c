@@ -140,6 +140,9 @@ Node* DFS(Node* initial, int* cont){
   }
   List *adj = get_adj_nodes(a);
   Node *node = first(adj);
+  while(node != NULL){
+    push(s,node);
+  }
   
   return NULL;
 }
