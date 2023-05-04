@@ -346,3 +346,24 @@ sudoku.c:145:17: error: ‘Node’ has no member named ‘next’
       |                 ^~
 Compilation failed
 469d380
+Thu 04 May 2023 08:28:16 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:145:17: error: passing argument 1 of ‘next’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  145 |     node = next(a);
+      |                 ^
+      |                 |
+      |                 Node *
+In file included from test.c:4:
+list.h:17:18: note: expected ‘List *’ but argument is of type ‘Node *’
+   17 | void* next(List* list);
+      |            ~~~~~~^~~~
+In file included from test.c:5:
+sudoku.c:145:12: error: ‘a’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  145 |     node = next(a);
+      |            ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d91889f
