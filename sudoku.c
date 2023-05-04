@@ -51,7 +51,7 @@ int is_valid(Node* n){
       marca[m] = 0;
     }
     for(j = 0 ; j < 9 ; j++){
-      if(n -> sudo[i][j] == 0){
+      if(n -> sudo[i][j] != 0){
         if(marca[n -> sudo[i][j]] == 1){
           return 0;
         }
@@ -65,7 +65,7 @@ int is_valid(Node* n){
       marca[m] = 0;
     }
     for(i = 0 ; i < 9 ; i++){
-      if(n -> sudo[i][j] == 0){
+      if(n -> sudo[i][j] != 0){
         if(marca[n -> sudo[i][j]] == 1){
           return 0;
         }
