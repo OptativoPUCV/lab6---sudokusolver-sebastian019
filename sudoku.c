@@ -81,8 +81,10 @@ int is_valid(Node* n){
     for(p = 0 ; p < 9 ; p++){
       int i = 3*(k/3) + (p/3);
       int j = 3*(k%3) + (p%3);
-      if(n -> sudo[i][j] != 0 && marca[n -> sudo[i][j]] == 1){
-        return 0;
+      if(n -> sudo[i][j] != 0){ 
+        if(marca[n -> sudo[i][j]] == 1){
+          return 0;
+        }
       }
       marca[n -> sudo[i][j]] = 1;
     }
