@@ -101,7 +101,7 @@ List* get_adj_nodes(Node* n){
       if(n -> sudo[i][j] == 0){
         //Node* adj_n = (Node*) malloc(sizeof(Node));
         for(int num = 1 ; num <= 9 ; num++){
-          adj_n = copy(n);
+          Node* adj_n = copy(n);
           adj_n -> sudo[i][j] = num;
           if(is_valid(adj_n)){
             pushBack(list, adj_n);
