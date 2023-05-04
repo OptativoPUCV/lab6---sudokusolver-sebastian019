@@ -367,3 +367,14 @@ sudoku.c:145:12: error: ‘a’ may be used uninitialized in this function [-Wer
 cc1: all warnings being treated as errors
 Compilation failed
 d91889f
+Thu 04 May 2023 08:28:24 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:141:15: error: ‘a’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  141 |   List *adj = get_adj_nodes(a);
+      |               ^~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+330c3b9

@@ -142,7 +142,7 @@ Node* DFS(Node* initial, int* cont){
   Node *node = first(adj);
   while(node != NULL){
     push(s,node);
-    node = next(a);
+    node = next(adj);
   }
   
   return NULL;
