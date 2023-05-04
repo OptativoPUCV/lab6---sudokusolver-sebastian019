@@ -137,13 +137,14 @@ Node* DFS(Node* initial, int* cont){
     if(is_final(a)){
       return a;
     }
+    List *adj = get_adj_nodes(a);
+    Node *node = first(adj);
+    while(node != NULL){
+      push(s,node);
+      node = next(adj);
+    }
   }
-  List *adj = get_adj_nodes(a);
-  Node *node = first(adj);
-  while(node != NULL){
-    push(s,node);
-    node = next(adj);
-  }
+  
   
   return NULL;
 }
