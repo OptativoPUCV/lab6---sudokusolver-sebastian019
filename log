@@ -336,3 +336,13 @@ sudoku.c:141:15: error: ‘a’ may be used uninitialized in this function [-Wer
 cc1: all warnings being treated as errors
 Compilation failed
 058cbaf
+Thu 04 May 2023 08:27:42 PM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:145:17: error: ‘Node’ has no member named ‘next’
+  145 |     node = node -> next;
+      |                 ^~
+Compilation failed
+469d380
