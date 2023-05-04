@@ -296,3 +296,18 @@ sudoku.c:141:15: error: ‘a’ may be used uninitialized in this function [-Wer
 cc1: all warnings being treated as errors
 Compilation failed
 6ed84af
+Thu 04 May 2023 08:25:16 PM UTC: 
+ sudoku.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:140:29: error: ‘a’ undeclared (first use in this function)
+  140 |   List *adj = get_adj_nodes(a);
+      |                             ^
+sudoku.c:140:29: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:141:9: error: unused variable ‘node’ [-Werror=unused-variable]
+  141 |   Node *node = first(adj);
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+16c6cfa
