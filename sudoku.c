@@ -143,12 +143,11 @@ Node* DFS(Node* initial, int* cont){
       push(s,node);
       node = next(adj);
     }
+    cont++;
     free(adj);
   }
   return NULL;
 }
-
-
 
 /*
 int main( int argc, char *argv[] ){
