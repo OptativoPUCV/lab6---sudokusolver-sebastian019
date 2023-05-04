@@ -103,7 +103,9 @@ List* get_adj_nodes(Node* n){
         for(int num = 1 ; num <= 9 ; num++){
           adj_n = copy(n);
           adj_n -> sudo[i][j] = num;
-          pushBack(list, adj_n);
+          if(is_valid(n)){
+            pushBack(list, adj_n);
+          }
         }
       }
     }
